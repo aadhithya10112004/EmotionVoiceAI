@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import os
 
 from emotion_detector import detect_emotion
 from emotion_detector import get_all_emotions
@@ -244,16 +245,28 @@ with tab1:
                 "outputs/ai_voice.mp3"
             )
 
-            if user_voice:
+            st.write("User voice path:", user_voice)
+            st.write("AI voice path:", ai_voice)
 
-                st.subheader("Your Speech")
-                st.audio(user_voice)
+            st.write(
+                "User voice exists:",
+                os.path.exists("outputs/user_voice.mp3")
+            )
 
-            if ai_voice:
+            st.write(
+                "AI voice exists:",
+                os.path.exists("outputs/ai_voice.mp3")
+            )
 
-                st.subheader("AI Response Voice")
-                st.audio(ai_voice)
+if user_voice and os.path.exists("outputs/user_voice.mp3"):
 
+    st.subheader("Your Speech")
+    st.audio(user_voice)
+
+if ai_voice and os.path.exists("outputs/ai_voice.mp3"):
+
+    st.subheader("AI Response Voice")
+    st.audio(ai_voice)
 
             # Emotion Graph
 
