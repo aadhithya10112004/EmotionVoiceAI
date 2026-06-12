@@ -1,20 +1,20 @@
-# 🎙️ Emotion-Based Voice Synthesis and Tone Analysis System
+# 🎙️ Emotion Voice AI
 
-## Overview
+An AI-powered multilingual emotion analysis and voice synthesis system that combines Speech-to-Text, Emotion Detection, Translation, AI Response Generation, and Text-to-Speech into a single interactive application.
 
-The Emotion-Based Voice Synthesis and Tone Analysis System is an AI-powered application that analyzes user text, detects the underlying emotion, performs tone analysis, and generates speech output with emotion-aware characteristics.
+## 🚀 Features
 
-The system combines Natural Language Processing (NLP), emotion classification, data visualization, speech synthesis, and an interactive dashboard to provide a complete end-to-end AI solution.
+### 🎤 Speech Recognition
 
----
+* Microphone input support
+* Multilingual speech recognition
+* Powered by Faster-Whisper
+* Supports English, Tamil, Hindi, Telugu, and Malayalam
 
-## Features
+### 😊 Emotion Detection
 
-### Emotion Detection
-
-* Detects emotions from user-entered text.
-* Uses a Transformer-based NLP model from Hugging Face.
-* Supports:
+* Transformer-based emotion classification
+* Detects:
 
   * Joy
   * Sadness
@@ -24,100 +24,85 @@ The system combines Natural Language Processing (NLP), emotion classification, d
   * Neutral
   * Disgust
 
-### Confidence Analysis
+### 🤖 AI Response Generation
 
-* Displays confidence scores for emotion predictions.
-* Shows the most probable emotion along with prediction confidence.
+* Generates contextual responses based on detected emotions
+* Emotion-aware interaction
 
-### Multi-Emotion Distribution
+### 🌍 Multilingual Support
 
-* Displays probability scores for all detected emotions.
-* Helps understand how the AI model interprets the input text.
+* English
+* Tamil
+* Hindi
+* Telugu
+* Malayalam
 
-### Tone Analysis
+### 🔊 Voice Synthesis
 
-Maps detected emotions to speech characteristics:
+* Edge-TTS Neural Voices
+* Male Voice
+* Female Voice
+* Child Voice
+* Robot Voice
 
-| Emotion  | Pitch  | Speed  | Energy    |
-| -------- | ------ | ------ | --------- |
-| Joy      | High   | Fast   | High      |
-| Sadness  | Low    | Slow   | Low       |
-| Anger    | High   | Fast   | Very High |
-| Fear     | Medium | Fast   | Medium    |
-| Surprise | High   | Medium | High      |
-| Neutral  | Normal | Normal | Normal    |
-| Disgust  | Low    | Normal | Medium    |
+### 📊 Analytics Dashboard
 
-### Emotion Visualization
-
-* Generates emotion distribution charts.
-* Displays confidence levels using graphical visualizations.
-
-### Voice Generation
-
-* Converts text into speech.
-* Adjusts speech rate based on detected emotion.
-
-### Emotion History
-
-* Stores previous analyses.
-* Displays historical emotion predictions inside the dashboard.
-
-### Interactive Dashboard
-
-* Built using Streamlit.
-* Provides a user-friendly interface for emotion analysis and visualization.
+* Emotion Distribution Graph
+* Emotion History
+* Statistics Dashboard
+* Insights Dashboard
 
 ---
 
-## System Architecture
+## 🏗️ System Architecture
 
-User Text Input
+User Speech/Text
 ↓
-Emotion Detection Model
+Speech-to-Text (Faster Whisper)
 ↓
-Confidence Analysis
+Translation to English
 ↓
-Tone Analyzer
+Emotion Detection (Transformer Model)
 ↓
-Voice Generator
+AI Response Generation
+↓
+Translation to Selected Language
+↓
+Voice Synthesis (Edge-TTS)
 ↓
 Dashboard Visualization
-↓
-Emotion History Storage
 
 ---
 
-## Technologies Used
+## 🛠️ Tech Stack
 
 ### Frontend
 
 * Streamlit
 
-### Artificial Intelligence / NLP
+### AI / NLP
 
-* Hugging Face Transformers
-* PyTorch
+* Transformers
+* Faster-Whisper
+* Deep Translator
+
+### Voice Processing
+
+* Edge-TTS
+* FFmpeg
 
 ### Data Processing
 
 * Pandas
+* NumPy
 
 ### Visualization
 
 * Matplotlib
 
-### Speech Synthesis
-
-* pyttsx3
-
-### Storage
-
-* CSV File Storage
-
 ---
 
-## Project Structure
+## 📂 Project Structure
 
 EmotionVoiceAI/
 
@@ -125,109 +110,85 @@ EmotionVoiceAI/
 
 ├── emotion_detector.py
 
+├── speech_ui.py
+
+├── voice_generator.py
+
+├── translator.py
+
+├── chatbot.py
+
 ├── tone_analyzer.py
 
 ├── graph_generator.py
 
-├── voice_generator.py
-
 ├── history_manager.py
 
-├── history.csv
+├── statistics_manager.py
 
-├── requirements.txt
+├── insights_manager.py
 
 ├── outputs/
 
-│   └── emotion_chart.png
+├── requirements.txt
 
 └── README.md
 
 ---
 
-## Installation
+## ⚙️ Installation
 
-### Clone Repository
+Clone the repository:
 
-git clone <repository-url>
-
+```bash
+git clone https://github.com/aadhithya10112004/EmotionVoiceAI.git
 cd EmotionVoiceAI
+```
 
-### Create Virtual Environment
+Create virtual environment:
 
+```bash
 python -m venv venv
+```
 
-### Activate Virtual Environment
+Activate environment:
 
-Windows:
-
+```bash
 venv\Scripts\activate
+```
 
-### Install Dependencies
+Install dependencies:
 
+```bash
 pip install -r requirements.txt
+```
 
----
+Run application:
 
-## Run the Application
-
+```bash
 streamlit run app.py
+```
 
 ---
 
-## Sample Input
 
-I got selected for my dream company today!
+## 🎯 Learning Outcomes
 
-### Sample Output
-
-Detected Emotion: JOY
-
-Confidence: 93.31%
-
-Tone Analysis:
-
-* Pitch: High
-* Speed: Fast
-* Energy: High
-
-Voice Output Generated
-
-Emotion Distribution Chart Displayed
-
----
-
-## Future Enhancements
-
-* Multi-language support
-* Real-time speech emotion detection
-* Voice personality selection
-* Emotion-aware audio generation
-* Download generated audio
-* AI avatar integration
-* Cloud deployment
-
----
-
-## Learning Outcomes
-
-This project demonstrates practical knowledge of:
-
-* Natural Language Processing (NLP)
+* Natural Language Processing
+* Speech Recognition
 * Transformer Models
-* Emotion Classification
-* Text-to-Speech Systems
-* Data Visualization
-* Streamlit Application Development
-* AI System Integration
-* End-to-End Machine Learning Applications
+* Emotion Analysis
+* Translation Systems
+* Text-to-Speech Synthesis
+* Streamlit Development
+* AI Application Deployment
 
 ---
 
-## Author
+## 👨‍💻 Author
 
 Aadhithya S
 
-Artificial Intelligence and Data Science Student
+Artificial Intelligence & Data Science Student
 
-Passionate about AI, Machine Learning, Full-Stack Development, and Software Engineering.
+Passionate about AI, NLP, Machine Learning, Full Stack Development, and Problem Solving.
