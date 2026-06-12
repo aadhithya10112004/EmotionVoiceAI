@@ -1,4 +1,5 @@
 import asyncio
+import os
 import edge_tts
 
 
@@ -9,6 +10,11 @@ def generate_voice(
     language,
     output_file
 ):
+    
+    os.makedirs(
+        "outputs",
+        exist_ok=True
+    )
 
     # -----------------------------
     # Language + Voice Personality
