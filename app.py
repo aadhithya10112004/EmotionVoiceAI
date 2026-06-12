@@ -166,9 +166,6 @@ with tab1:
                 os.path.join("outputs", "ai_voice.mp3")
             )
 
-            # DEBUG
-            st.write("User voice:", user_voice)
-            st.write("AI voice:", ai_voice)
 
             # -------------------------
             # PLAY AUDIO
