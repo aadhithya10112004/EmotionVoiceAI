@@ -87,6 +87,9 @@ def audio_to_text(audio_bytes,language):
 
     except Exception as e:
 
-        print("ERROR:", e)
+        import traceback
 
-        return None
+        print("ERROR:", str(e))
+        print(traceback.format_exc())
+
+        return f"ERROR: {str(e)}"

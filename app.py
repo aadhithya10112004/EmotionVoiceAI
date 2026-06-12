@@ -111,15 +111,33 @@ with tab1:
         )
 
         if audio:
+
             st.audio(audio["bytes"])
 
-            text = audio_to_text(audio["bytes"], language)
+            text = audio_to_text(
+                audio["bytes"],
+                language
+            )
 
             if text:
-                user_text = text
-                st.success(f"Detected Text: {text}")
+
+                if str(text).startswith("ERROR:"):
+
+                    st.error(text)
+
+                else:
+
+                    user_text = text
+
+                    st.success(
+                        f"Detected Text: {text}"
+                    )
+
             else:
-                st.error("Speech not recognized")
+
+                st.error(
+                    "Speech not recognized"
+                )
 
     # -------------------------
     # ANALYZE BUTTON
@@ -133,10 +151,13 @@ with tab1:
 
             # Translation
             english_text = translate_to_english(user_text)
+            #st.write("Original Text:", user_text)
+            #st.write("English Translation:", english_text)
 
             # Emotion detection
             emotion, confidence = detect_emotion(english_text)
-
+            #st.write("Detected Emotion:", emotion)
+            #st.write("Confidence:", confidence)
             # AI response
             ai_response = generate_response(english_text, emotion)
             translated_response = translate_from_english(ai_response, language)
